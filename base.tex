@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+% Loaded Packages
+%===================
+\usepackage[margin=1in]{geometry}
+\geometry{letterpaper}                  
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{fixltx2e}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\usepackage[pdftex]{color}
+\usepackage{color}
+\usepackage{varioref}
+\usepackage{mathrsfs}
+\usepackage[sort&compress,colon,square,numbers]{natbib}
+\usepackage{cite}
+%===================
+
+% Auto-size brackets
+%===================
+%http://tex.stackexchange.com/questions/31526/macro-for-left-and-right/58641#58641
+\makeatletter
+\def\resetMathstrut@{%
+  \setbox\z@\hbox{%
+    \mathchardef\@tempa\mathcode`\[\relax
+    \def\@tempb##1"##2##3{\the\textfont"##3\char"}%
+    \expandafter\@tempb\meaning\@tempa \relax
+  }%
+  \ht\Mathstrutbox@\ht\z@ \dp\Mathstrutbox@\dp\z@}
+\makeatother
+\begingroup
+  \catcode`(\active \xdef({\left\string(}
+  \catcode`)\active \xdef){\right\string)}
+\endgroup
+\mathcode`(="8000 \mathcode`)="8000
+%===================
+
+% Math Operators
+%===================
+\labelformat{equation}{\textup{(#1)}}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\range}{range}
+\DeclareMathOperator*{\spn}{span}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+%===================
+
+% Useful aliases
+%===================
+\newcommand{\matlab}[1]{\texttt{#1}}
+\newcommand{\setname}[1]{\textsl{#1}}
+\newcommand{\Ce}{\mathbb{C}}
+\def\transpose{\top}
+\newcommand{\hatt}{\widehat}
+%===================
+
+% Special phrases
+%===================
+\newcommand{\parameters}{\multicolumn{2}{l}{\textbf{Parameters}}\\}
+\newcommand{\fdescription}[1]{\multicolumn{2}{p{0.96\linewidth}}{\textbf{Description}#1}\\\hline}
+\newcommand{\retvalues}{\multicolumn{2}{l}{\textbf{Returned values}}\\}
+%===================
+
+% Random variables
+%===================
+\def\0{\boldsymbol{0}}
+\def\b{\boldsymbol{b}}
+\def\bmu{\boldsymbol{\mu}}
+\def\e{\boldsymbol{e}}
+\def\u{\boldsymbol{u}}
+\def\x{\boldsymbol{x}}
+\def\v{\boldsymbol{v}}
+\def\w{\boldsymbol{w}}
+\def\N{\boldsymbol{N}}
+\def\X{\boldsymbol{X}}
+\def\Y{\boldsymbol{Y}}
+\def\A{\boldsymbol{A}}
+\def\B{\boldsymbol{B}}
+\def\y{\boldsymbol{y}}
+\def\cX{\mathcal{X}}
+%===================
+
+% Short hand
+%===================
+\newcommand{\eg}{{e.g.,~}}
+\newcommand{\ea}{{et al.~}}
+\newcommand{\ie}{{i.e.,~}}
+\newcommand{\ep}{\epsilon}
+\newcommand{\st}{\textbf{\textsc{s.t}} \:}
+\newcommand{\Ep}{$\epsilon\:$}
+\newcommand{\db}{{\boldsymbol{d}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Pe}{{\mathbb{P}}}
+\newcommand{\where}{\: \rvert \:}
+%===================
+
+
+% Formatting
+%===================
+\setlength{\columnsep}{1cm}
+\setlist[enumerate, 1]{label=\textbf{\alph*.}}
+%===================
+
+% TODOs (common people who boss me around ;))
+%===================
+\newcommand{\todo}[1]{{\color{blue}{\it TODO: #1}}}
+\newcommand{\jovo}[1]{{\color{green}{\it jovo: #1}}}
+\newcommand{\will}[1]{{\color{red}{\it will: #1}}}
+\newcommand{\greg}[1]{{\color{cyan}{\it greg: #1}}}
+%===================
+
+% Document
+%===================
+\begin{document}
+
+% Header
+%===================
+\begin{center}
+\Large \bf A document of words, stuff, and other such things \end{center}
+\begin{center} Greg Kiar $\cdot$  \today \end{center}
+\bigskip
+%\tableofcontents
+%===================
+%===================
+
+
+
+%===================
+\end{document}
